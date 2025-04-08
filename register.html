@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Қайда? — Тіркелу</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="register-container">
+    <h2>Тіркелу</h2>
+    <form action="/register" method="POST">
+      <div class="input-wrapper">
+        <label for="username">Пайдаланушы аты</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-wrapper">
+        <label for="email">Электронды пошта</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="input-wrapper">
+        <label for="password">Құпиясөз</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="input-wrapper">
+        <label for="confirm-password">Құпиясөзді қайталаңыз</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Тіркелу</button>
+    </form>
+    <p>Егер тіркелген болсаңыз, <a href="login.html">кіру</a> жасаңыз.</p>
+  </div>
+</body>
+
+</html>
