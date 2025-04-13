@@ -19,48 +19,48 @@
 				<div class="col-md-6 col-lg-4">
 					<div class="login-wrap p-0">
 		      	<h3 class="mb-4 text-center">Create New Account</h3>
-		      	<form action="#" class="signin-form">
-		      		<!-- Name Field -->
-		      		<div class="form-group">
-		      			<input type="text" class="form-control" placeholder="Full Name" required>
-		      		</div>
-	            <!-- Username Field -->
-	            <div class="form-group">
-	              <input type="text" class="form-control" placeholder="Username" required>
-	            </div>
-	            <!-- Email Field -->
-	            <div class="form-group">
-	              <input type="email" class="form-control" placeholder="Email" required>
-	            </div>
-	            <!-- Password Field -->
-	            <div class="form-group">
-	              <input id="password-field" type="password" class="form-control" placeholder="Password" required>
-	              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-	            </div>
-	            <!-- Confirm Password Field -->
-	            <div class="form-group">
-	              <input id="confirm-password-field" type="password" class="form-control" placeholder="Confirm Password" required>
-	              <span toggle="#confirm-password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-	            </div>
-	            <div class="form-group">
-	            	<button type="submit" class="form-control btn btn-primary submit px-3">Register</button>
-	            </div>
-	            <div class="form-group d-md-flex">
-	            	<div class="w-50">
-		            	<label class="checkbox-wrap checkbox-primary">Remember Me
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-									</label>
-								</div>
-								 
-								<div class="w-50 text-md-right">
-									<a class="txt1" href="login.html">
-										Already have an account?
-										<i class="fa fa-long-arrow-right"></i>					
-									</a>
-								</div>
-	            </div>
-	          </form>
+		      	<form id="register-form" action="#" class="register-form">
+					<!-- Username Field -->
+					<div class="form-group">
+						<input id="username" type="text" class="form-control" placeholder="Username" required>
+					</div>
+					<!-- City Field -->
+					<div class="form-group">
+						<input id="city" type="text" class="form-control" placeholder="City" required>
+					</div>
+					<!-- Email Field -->
+					<div class="form-group">
+						<input id="email" type="email" class="form-control" placeholder="Email" required>
+					</div>
+					<!-- Password Field -->
+					<div class="form-group">
+						<input id="password" type="password" class="form-control" placeholder="Password" required>
+					<span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					</div>
+					<!-- Confirm Password Field -->
+					<div class="form-group">
+						<input id="confirm-password" type="password" class="form-control" placeholder="Confirm Password" required>
+					<span toggle="#confirm-password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="form-control btn btn-primary submit px-3">Register</button>
+					</div>
+					<div class="form-group d-md-flex">
+						<div class="w-50">
+							<label class="checkbox-wrap checkbox-primary">Remember Me
+										<input type="checkbox" checked>
+										<span class="checkmark"></span>
+										</label>
+									</div>
+									
+									<div class="w-50 text-md-right">
+										<a class="txt1" href="login.html">
+											Already have an account?
+											<i class="fa fa-long-arrow-right"></i>					
+										</a>
+									</div>
+					</div>
+	          	</form>
 			  <div class="w-100 text-center">
 				<a href="#" style="color: #fff">Forgot Password?</a>
 			</div>
