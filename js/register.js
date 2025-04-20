@@ -8,6 +8,7 @@ async function register(username, city, email, password) {
 			body: JSON.stringify({ username, city, email, password }),
 		});
 
+		console.log(response)
 		if (!response.ok) {
 			throw new Error('Неверные данные');
 		}

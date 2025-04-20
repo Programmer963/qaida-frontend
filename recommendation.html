@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QAIDA — Рекомендации по Казахстану</title>
+
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/recommendation.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+    <header class="header" data-header>
+      <div class="overlay" data-overlay></div>
+      <div class="header-top">
+        <div class="container">
+          <a href="tel:+77001234567" class="helpline-box">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <div class="wrapper">
+              <p class="helpline-title">Свяжитесь с нами:</p>
+              <p class="helpline-number">+7 (700) 123 45 67</p>
+            </div>
+          </a>
+  
+          <a href="#" class="logo">
+            <!-- <img src="C:\Users\admin\Desktop\assets\assets\images\logo.png" alt="Қайда бару?"> -->
+            <h1>QAIDA</h1>
+          </a>
+  
+          <div class="header-btn-group">
+            <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="header-bottom">
+        <div class="container">
+          <ul class="social-list">
+            <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          </ul>
+  
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">
+                <img src="./assets/images/logo-blue.svg" alt="Қайда бару?">
+              </a>
+              <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+  
+            <ul class="navbar-list">
+              <li><a href="index.html" class="navbar-link" data-nav-link>Главная</a></li>
+              <li><a href="recommendation.html" class="navbar-link">Рекомендации</a></li>
+              <li><a href="profile.html" class="navbar-link" data-nav-link>Профиль</a></li>
+              <li><a href="#contact" class="navbar-link" data-nav-link>Контакты</a></li>
+              <li><a href="login.html" class="navbar-link"><b>Вход</b></a></li>
+              <li><a href="register.html" class="navbar-link"><b>Регистрация</b></a></li>
+  
+            </ul>
+          </nav>
+
+        </div>
+      </div>
+    </header>
+  
+  <!-- Секция Рекомендаций -->
+  <section class="recommendations" id="recommendations">
+    <div class="container">
+      <h2 class="h2 section-title">Лучшие места для отдыха</h2>
+      <p class="section-text">Наши рекомендации для уникальных мест в Казахстане. Найдите что-то интересное для отдыха!</p>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="recommendation-list">
+      <!-- Пустые карточки, которые будут заполняться динамически -->
+      <div class="recommendation-card skeleton"></div>
+      <div class="recommendation-card skeleton"></div>
+      <div class="recommendation-card skeleton"></div>
+      
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-primary" id="loadMoreBtn">Загрузить больше</button>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <h1>QAIDA</h1>
+          </a>
+          <p class="footer-text">Найди идеальное место для отдыха в Казахстане. Мы учитываем погоду, бюджет и расположение!</p>
+        </div>
+
+        <div class="footer-contact" id="contact">
+          <h4 class="contact-title">Контакты</h4>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+77001234567" class="contact-link">+7 (700) 123 45 67</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:hello@kudapoyti.kz" class="contact-link">hello@kudapoyti.kz</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>г. Астана, Қазақстан</address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2025 QAIDA. Все права защищены</p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Политика конфиденциальности</a></li>
+          <li><a href="#" class="footer-bottom-link">Условия использования</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </footer>
+  
+
+  <script src="js/recommendation.js"></script>
+</body>
+</html>

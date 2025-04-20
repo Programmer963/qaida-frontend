@@ -64,7 +64,9 @@
 
 
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 /*-----------------------------------*\
  * #RESET
@@ -119,6 +121,7 @@ body { background: var(--white); }
 .container { padding-inline: 15px; }
 
 .btn {
+  width: 30vw;
   color: var(--white);
   text-transform: uppercase;
   font-size: var(--fs-5);
@@ -126,6 +129,8 @@ body { background: var(--white); }
   padding: var(--padding, 8px 18px);
   border: var(--border-width, 2px) solid transparent;
   transition: var(--transition);
+  text-decoration: none !important;
+  text-align: center;
 }
 
 .btn-primary {
@@ -272,7 +277,7 @@ body { background: var(--white); }
 
 .header-bottom .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-block: 15px;
 }

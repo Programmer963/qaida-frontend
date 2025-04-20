@@ -13,9 +13,10 @@ async function login(email, password) {
 	}
 
 	const data = await response.json();
-	const token = data.token;
 
-	localStorage.setItem('jwt', token);
+	localStorage.setItem('jwt', data.token);
+	localStorage.setItem('city', data.city);
+	localStorage.setItem('userId', data.userId);
 
 	window.location.href = 'index.html';
 	} catch (err) {

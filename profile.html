@@ -1,0 +1,264 @@
+<!-- Профиль Беті - profile.html -->
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Профиль - QAIDA</title>
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- БАСҚА БӨЛІМ -->
+  <header class="header" data-header>
+    <div class="overlay" data-overlay></div>
+    <div class="header-top">
+      <div class="container">
+        <a href="tel:+77001234567" class="helpline-box">
+          <div class="icon-box">
+            <ion-icon name="call-outline"></ion-icon>
+          </div>
+          <div class="wrapper">
+            <p class="helpline-title">Свяжитесь с нами:</p>
+            <p class="helpline-number">+7 (700) 123 45 67</p>
+          </div>
+        </a>
+
+        <a href="#" class="logo">
+          <!-- <img src="C:\Users\admin\Desktop\assets\assets\images\logo.png" alt="Қайда бару?"> -->
+          <h1>QAIDA</h1>
+        </a>
+
+        <div class="header-btn-group">
+          <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+            <ion-icon name="menu-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        </ul>
+
+        <nav class="navbar" data-navbar>
+          <div class="navbar-top">
+            <a href="#" class="logo">
+              <img src="./assets/images/logo-blue.svg" alt="Қайда бару?">
+            </a>
+            <button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          </div>
+
+          <ul class="navbar-list">
+            <li><a href="index.html" class="navbar-link" data-nav-link>Главная</a></li>
+              <li><a href="recommendation.html" class="navbar-link">Рекомендации</a></li>
+              <li><a href="profile.html" class="navbar-link" data-nav-link>Профиль</a></li>
+              <li><a href="#contact" class="navbar-link" data-nav-link>Контакты</a></li>
+              <li><a href="login.html" class="navbar-link"><b>Вход</b></a></li>
+              <li><a href="register.html" class="navbar-link"><b>Регистрация</b></a></li>
+  
+
+          </ul>
+        </nav>
+
+        <!-- <button class="btn btn-primary">Генерациялау</button> -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Профиль Бөлімі -->
+  <section class="profile">
+    <div class="container">
+      <div class="global-headline">
+        <h3 class="headline headline-dark">Ваш профиль</h3>
+        <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+      </div>
+
+      <div class="row profile-data">
+        <div class="description padding-right">
+          <h3 class="headline">Личные данные</h3>
+
+          <div id="profile-display">
+            <p><strong>Имя:</strong> <span id="display-name"></span></p>
+            <p><strong>Почта:</strong> <span id="display-email"></span></p>
+            <p><strong>Телефон:</strong> <span id="display-phone"></span></p>
+            <p><strong>Адрес:</strong> <span id="display-address"></span></p>
+            <button class="btn btn-secondary" onclick="toggleEdit(true)">Редактировать</button>
+          </div>
+
+          <form id="profile-form" style="display: none;">
+            <div class="input-group">
+              <label for="name">Аты</label>
+              <input type="text" id="name" placeholder="Атыңыз" />
+            </div>
+            <div class="input-group">
+              <label for="email">Электронды пошта</label>
+              <input type="email" id="email" placeholder="Электронды пошта" />
+            </div>
+            <div class="input-group">
+              <label for="phone">Телефон</label>
+              <input type="tel" id="phone" placeholder="Телефон нөмірі" />
+            </div>
+            <div class="input-group">
+              <label for="address">Қала</label>
+              <input type="text" id="address" placeholder="Қала" />
+            </div>
+            <div class="input-group">
+              <label for="avatarUpload">Аватар жүктеу</label>
+              <input type="file" id="avatarUpload" accept="image/*" />
+            </div>
+            <button type="submit" class="btn btn-primary">Өзгерістерді сақтау</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Тапсырыс Тарихы -->
+      <div class="order-history animate-bottom" style="margin-top: 5rem;">
+        <div class="global-headline">
+          <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+        </div>
+        <div id="order-list" style="margin-top: 2rem; text-align: center;">
+          <!-- Тапсырыс тарихы осында көрсетіледі -->
+        </div>
+      </div>
+
+      <!-- Тандалғандар -->
+      <div class="order-history animate-bottom" style="margin-top: 5rem;">
+        <div class="global-headline">
+          <div class="asterisk"><i class="fas fa-asterisk"></i></div>
+        </div>
+        <div id="favorites-list" style="margin-top: 2rem; text-align: center;">
+          <!-- Тандалғандар осында көрсетіледі -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER БӨЛІМІ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <h1>QAIDA</h1>
+          </a>
+          <p class="footer-text">Найди идеальное место для отдыха в Казахстане. Мы учитываем погоду, бюджет и расположение!</p>
+        </div>
+
+        <div class="footer-contact" id="contact">
+          <h4 class="contact-title">Контакты</h4>
+          <ul>
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+              <a href="tel:+77001234567" class="contact-link">+7 (700) 123 45 67</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+              <a href="mailto:hello@kudapoyti.kz" class="contact-link">hello@kudapoyti.kz</a>
+            </li>
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+              <address>г. Астана, Қазақстан</address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright">&copy; 2025 QAIDA. Все права защищены</p>
+        <ul class="footer-bottom-list">
+          <li><a href="#" class="footer-bottom-link">Политика конфиденциальности</a></li>
+          <li><a href="#" class="footer-bottom-link">Условия использования</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </footer>
+
+  <script>
+    // Профильді өңдеу және тапсырыс/тандамалар тарихын көрсету үшін JavaScript кодтары
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const phoneInput = document.getElementById("phone");
+    const addressInput = document.getElementById("address");
+    const avatar = document.getElementById("avatar");
+    const avatarUpload = document.getElementById("avatarUpload");
+
+    const displayName = document.getElementById("display-name");
+    const displayEmail = document.getElementById("display-email");
+    const displayPhone = document.getElementById("display-phone");
+    const displayAddress = document.getElementById("display-address");
+
+    const profileForm = document.getElementById("profile-form");
+    const profileDisplay = document.getElementById("profile-display");
+
+    let userData = JSON.parse(localStorage.getItem("user")) || {
+      name: "",
+      email: "",
+      phone: "",
+      address: "",
+      avatar: ""
+    };
+
+    function updateDisplay() {
+      displayName.textContent = userData.name;
+      displayEmail.textContent = userData.email;
+      displayPhone.textContent = userData.phone;
+      displayAddress.textContent = userData.address;
+      if (userData.avatar) avatar.src = userData.avatar;
+    }
+
+    function toggleEdit(showEdit) {
+      if (showEdit) {
+        profileForm.style.display = "block";
+        profileDisplay.style.display = "none";
+        nameInput.value = userData.name;
+        emailInput.value = userData.email;
+        phoneInput.value = userData.phone;
+        addressInput.value = userData.address;
+      } else {
+        profileForm.style.display = "none";
+        profileDisplay.style.display = "block";
+        updateDisplay();
+      }
+    }
+
+    avatarUpload.addEventListener("change", function () {
+      const file = avatarUpload.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          avatar.src = e.target.result;
+          userData.avatar = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    profileForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      userData = {
+        name: nameInput.value,
+        email: emailInput.value,
+        phone: phoneInput.value,
+        address: addressInput.value,
+        avatar: userData.avatar
+      };
+      localStorage.setItem("user", JSON.stringify(userData));
+      toggleEdit(false);
+      alert("Профиль сәтті жаңартылды!");
+    });
+
+    updateDisplay();
+
+    // Тапсырыс тарихын көрсету үшін код
+  </script>
+</body>
+</html>
